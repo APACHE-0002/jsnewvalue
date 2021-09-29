@@ -5,13 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        *{
+            background-color: gray;
+        }
+    </style>
 </head>
 <body>
     <h1>arrays</h1>
 
     <script>
+        let cars = ['lemousine', 'mercedes coupe', 'suv']
 
+        let last = cars[cars.length - 1]
+        console.log(last);
+
+        cars.push('S10');
+        //remove o ultimo
+        cars.pop();
+        //remove o primeiro
+        cars.shift();
+        //adicionar no começo do array
+        cars.unshift('Silverado')
+        console.log(cars);
         
+        let pos = cars.indexOf('mercedes coupe');
+        console.log(pos);
+
+        //remover o item na posiçao index
+        cars.splice(pos, 1);
+        console.log(cars);
+
+        //cria um novo array, excluindo o item naquele index
+        let arrayCopy = cars.slice(1)
+        console.group('arrayCopy')
+        console.log(arrayCopy)
+        console.groupEnd('arrayCopy')
+
+
+
+        //posição index
+        (cars.forEach(function(item, index, array) {
+            console.log(item, index)
+        })());
+
+        console.log(Object.keys(cars))
     </script>
 </body>
 </html>
