@@ -15,6 +15,9 @@
 <body>
     <h1>arrays</h1>
 
+    <ul id="letterResult">
+    </ul>
+
     <script>
         let cars = ['lemousine', 'mercedes coupe', 'suv']
 
@@ -48,9 +51,53 @@
         console.groupEnd('arrayCopy')
 
 
+        //posições que existem no array
         console.group('Object')
         console.log(Object.keys(cars))
         console.groupEnd('Object')
+
+
+        let msgArray = []
+        msgArray[0] = 'Hello'
+        msgArray[99] = 'world'
+
+        console.group('positionArray');
+        console.log(msgArray)
+        console.log(Object.keys(msgArray))
+        console.groupEnd('positionArray');
+
+        if (msgArray.length === 100) {
+        console.log('The length is 100.')
+        }
+
+
+        console.group('Two Dimensions')
+        let board = [
+            ['R','N','B','Q','K','B','N','R'],
+            ['P','P','P','P','P','P','P','P'],
+            [' ',' ',' ',' ',' ',' ',' ',' '],
+            [' ',' ',' ',' ',' ',' ',' ',' '],
+            [' ',' ',' ',' ',' ',' ',' ',' '],
+            [' ',' ',' ',' ',' ',' ',' ',' '],
+            ['p','p','p','p','p','p','p','p'],
+            ['r','n','b','q','k','b','n','r'] ]
+
+        console.log(board.join('\n') + '\n\n')
+
+            // Move King's Pawn forward 2W
+            board[4][4] = board[6][4]
+            board[6][4] = ' '
+            console.log(board.join('\n'))
+        console.groupEnd('Two Dimensions')
+
+
+
+
+
+
+
+
+
 
         
         </script>
