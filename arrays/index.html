@@ -179,6 +179,22 @@
                     mycar = new Model("Ford", "Mustang");
                     document.getElementById("demo").innerHTML = mycar.show();
 
+                
+
+                    class MyArray extends Array {
+                    // Overwrite species to the parent Array constructor
+                    static get [Symbol.species]() { return Array; }
+                    }
+                    var a = new MyArray(1,2,3);
+                    var mapped = a.map(x => x * x);
+                    console.log(mapped instanceof MyArray); // false
+                    console.log(mapped instanceof Array);   // true
+
+                    let arrayPics = ['picRandom', 'picMountain', 'picWorld']
+
+                    // at consegue pegar do ultimo para o primeiro colocando -1
+                    //ou do primeiro ao ultimo colocando 0
+                    console.log(arrayPics.at(-1))
 
 
         
