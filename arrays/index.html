@@ -190,11 +190,19 @@
                     console.log(mapped instanceof MyArray); // false
                     console.log(mapped instanceof Array);   // true
 
-                    let arrayPics = ['picRandom', 'picMountain', 'picWorld']
+                    let arrayPics = ['picRandom', 'picMountain', 'picWorld', 'picOcean', 'picWid']
+                    let positions = ['oneFormat', 'PlusFormat', 'hdFormat']
 
                     // at consegue pegar do ultimo para o primeiro colocando -1
                     //ou do primeiro ao ultimo colocando 0
                     console.log(arrayPics.at(-1))
+
+                    //une arrays
+                    console.log(arrayPics.concat(positions));
+
+                    console.group('copyWithin')
+                    console.log(arrayPics.copyWithin(0, 3, 2))
+                    console.groupEnd('copyWithin')
 
 
         
