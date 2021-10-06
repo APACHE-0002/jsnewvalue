@@ -56,7 +56,7 @@
   var mySet = new Set()
   var myWeakSet = new WeakSet()
 
-  var obj1 = {}
+  var obj1 = ['string', 'string']
   var obj2 = {}
 
   mySet.add(obj1);
@@ -68,7 +68,7 @@
   console.log(myWeakSet.has(obj1));
   console.log(mySet.has(obj1));
 
-  obj1 = null;
+  //obj1 = null;
   
   console.log(mySet.has(obj1));
   console.log(myWeakSet.has(obj1));

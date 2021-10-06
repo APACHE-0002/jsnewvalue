@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+    let array = new Uint8ClampedArray([0, 255, 256,-1, 150])
+
+    // Se o valor for menor que zero, o valor será 0
+    // Se o valor for maior que 255, o valor será 255
+    console.log(array[0])  // 0
+    console.log(array[1])  // 255
+    console.log(array[2])  // 255
+    console.log(array[3])  // 0
+    console.log(array[4])  // 150
+
+    </script>
+</body>
+</html>
