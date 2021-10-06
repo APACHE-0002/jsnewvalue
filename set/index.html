@@ -11,7 +11,26 @@
 
 
     <script>
+
+        const mySet = new Set();
+
+        /*mySet.clear();
+        mySet.add('arriba');
+
+        console.log(mySet.delete('arriba'));
+        console.log(mySet);*/
+
+        function getRandom(){
+            return Math.round(Math.random(10) * 10)
+        }
+
+        while(mySet.size < 10){
+            mySet.add(getRandom())
+        }
+        console.log([...mySet])
         
+
+
     </script>
 </body>
 </html>

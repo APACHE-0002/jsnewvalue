@@ -43,6 +43,40 @@
   foo.bar.baz = foo; // Circular reference!
   execRecursively(obj => console.log("objeto: ", obj), foo);
 
+
+  const myweakSet = new WeakSet();
+  {
+    let myObj = { a: 1}
+    myweakSet.add(myObj)
+    console.log(myweakSet);
+  }
+
+  setTimeout(() => console.log(myweakSet))
+
+  var mySet = new Set()
+  var myWeakSet = new WeakSet()
+
+  var obj1 = {}
+  var obj2 = {}
+
+  mySet.add(obj1);
+  mySet.add(obj2);
+
+  myWeakSet.add(obj1);
+  myWeakSet.add(obj2);
+
+  console.log(myWeakSet.has(obj1));
+  console.log(mySet.has(obj1));
+
+  obj1 = null;
+  
+  console.log(mySet.has(obj1));
+  console.log(myWeakSet.has(obj1));
+
+  for(let item of mySet){
+    console.log(item);
+  }
+
     </script>
     
 </body>
