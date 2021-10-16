@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const myMap = new Map();
+
+        let obj = { a: 1 }
+        myMap.set(obj, 'This my object')
+
+        console.log(myMap)
+
+        function sample() { console.log('hi')}
+
+        myMap.set(sample, 'This is a function');
+
+        const calculator = {
+            add: (a, b) => a + b,
+            minus: (a,b) => a - b
+        }
+
+        myMap.set(calculator.add, 'This is a add function');
+        myMap.set(calculator.minus, 'This is a minus function');
+
+        function getDescription( _funName ){
+            return myMap.get(_funName);
+        }
+        console.log(getDescription(calculator.add))
+
+
+
+    </script>
+</body>
+</html>
