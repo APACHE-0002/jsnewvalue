@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //ao loop bater no valor indicado, ira pular aquela posiçao do loop
+        //continue
+
+        let text = '';
+
+        for (let i = 0; i < 10; i++) {
+        if (i === 3) {
+            continue;
+        }
+        text = text + i;
+        }
+
+        console.log(text);
+        // expected output: "012456789"
+    </script>
+</body>
+</html>
