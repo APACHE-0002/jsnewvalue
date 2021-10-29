@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //pausa a funçao somente uma vez para a proxima requisiçao que chamar ela ter o valor da antiga
+        function* generator(i) {
+            yield i;
+            return yield i + 10;
+            }
+
+            const gen = generator(10);
+
+            console.log("pausado primeira vez: ", gen.next().value);
+            // expected output: 10
+
+            console.log("pausado segunda vez: ", gen.next().value);
+            // expected output: 20
+
+    </script>
+</body>
+</html>
