@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+      //mesmo que nao tenha como resultado nenhum erro
+      //o throw ira indicar para o try catch, que o resultado da funçao
+      //é um erro e ira apontar diretamente para o catch
+      function getRectArea(width, height) {
+        if (isNaN(width) || isNaN(height)) {
+          throw 'Parameter is not a number!';
+        }
+      }
+
+      try {
+        getRectArea(3, 'A');
+      } catch (e) {
+        console.error(e);
+        // expected output: "Parameter is not a number!"
+      }
+
+        
+    </script>
+
+</body>
+</html>
