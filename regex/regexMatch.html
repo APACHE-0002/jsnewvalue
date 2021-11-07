@@ -24,6 +24,25 @@
             // expected output: "VALID"
 
 
+            class MyRegExp extends RegExp {
+            [Symbol.match](str) {
+                let result = RegExp.prototype[Symbol.match].call(this, str);
+                if (!result) return null;
+                return {
+                group(n) {
+                    return result[n];
+                }
+                };
+            }
+            }
+
+            let re = new MyRegExp('([0-9]+)-([0-9]+)-([0-9]+)');
+            let str = '2016-01-02';
+            let result = str.match(re); // String.prototype.match calls re[@@match].
+            console.log(result.group(1)); // 2016
+            console.log(result.group(2)); // 01
+            console.log(result.group(3)); // 02
+
     </script>
 </body>
 </html>
