@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const regex1 = RegExp('foo*', 'g');
+        const str1 = 'table football, foosball';
+        let array1;
+
+        while ((array1 = regex1.exec(str1)) !== null) {
+        console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+        // expected output: "Found foo. Next starts at 9."
+        // expected output: "Found foo. Next starts at 19."
+        }
+
+
+
+    </script>
+</body>
+</html>
