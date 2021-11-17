@@ -10,6 +10,59 @@
     
 
     <script>
+
+        /*
+            Procurar um elemento em especifico
+            /elemento/
+        */
+
+
+            const text = 'Lasanha a bolonhesa Especial.';
+
+            const positions = 'um texto com os numeros 59548564465';
+
+            console.log(text.match(/e/gi));
+            //retorna todos o 'e', independente se esta maiusculo ou minusculo
+            
+
+            console.log(text.match(/e|b/gi));
+            //retorna todos 'b' e 'e'
+
+            console.log(text.match(/./gi));
+            //retorna tudo
+
+            console.log(text.match(/\./gi));
+            //pesquisar o '.' em especifico
+
+            console.log(text.match(/[abcde]/gi));
+            //pesquisa letra por letra dentro do colchetes
+
+            console.log(positions.match(/[0-9]/gi));
+            //busca todos os numeros de 0 a 9
+
+
+
+            //continuar
+            //https://medium.com/cwi-software/e-o-regex-como-vai-657f94388dc
+            /*
+            Flags
+            
+            g : Com essa flag a expressão retorna todas as correspondências
+            não se limitando a primeira que achar;
+
+            i : Aplicando essa flag você está dizendo para expressão
+            pode ignorar maiúsculas e minúsculas;
+
+            m : Com essa flag a expressão trata caracteres de inicio 
+            e fim (^ $) delimitando a cada nova linha e não o texto por completo;
+
+            
+            
+            */
+
+
+
+
             let re = /(\w+)\s(\w+)/
 
             console.log(re)
