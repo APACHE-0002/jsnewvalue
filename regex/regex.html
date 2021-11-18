@@ -34,11 +34,18 @@
             console.log(text.match(/\./gi));
             //pesquisar o '.' em especifico
 
+            console.log(text.match(/[.]/gi));
+            //o ponto agora é considerado pela expressão
+
             console.log(text.match(/[abcde]/gi));
             //pesquisa letra por letra dentro do colchetes
 
             console.log(positions.match(/[0-9]/gi));
             //busca todos os numeros de 0 a 9
+
+
+            console.log(positions.match(/[^0-5]/gi));
+            //pegara tudo menos o elemento de 0-5
 
 
 
