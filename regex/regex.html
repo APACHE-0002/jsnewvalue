@@ -19,7 +19,7 @@
 
             const text = 'Lasanha a bolonhesa Especial.';
 
-            const positions = 'um texto com os numeros 59548564465';
+            const positions = 'um texto commmmmmm os numeros 59548564465';
 
             console.log(text.match(/e/gi));
             //retorna todos o 'e', independente se esta maiusculo ou minusculo
@@ -46,6 +46,11 @@
 
             console.log(positions.match(/[^0-5]/gi));
             //pegara tudo menos o elemento de 0-5
+
+            console.log(positions.match(/com{0,1}/g));
+            //retorna somente o primeiro m com
+            console.log(positions.match(/com{1,}/g));
+            //retorna todos os m, commmmmmmm
 
 
 
