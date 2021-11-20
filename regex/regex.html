@@ -21,6 +21,10 @@
 
             const positions = 'um texto commmmmmm os numeros 59548564465';
 
+            const loops = 'ala caiu no barranco, hehehehehehehe';
+
+            const googs = 'Sr Ivan, Diovani';
+
             console.log(text.match(/e/gi));
             //retorna todos o 'e', independente se esta maiusculo ou minusculo
             
@@ -51,7 +55,18 @@
             //retorna somente o primeiro m com
             console.log(positions.match(/com{1,}/g));
             //retorna todos os m, commmmmmmm
+            console.log(positions.match(/com{2}/g));
+            //retornar 2 m
+            console.log(positions.match(/com{1,5}/g));
+            //retorna 5 m
 
+            console.log(loops.match(/(he)+/g));
+            //retorna todos os he
+
+            console.log(loops.match(/(he)+/g));
+            //agora se ele encontrar mais he, em outras partes do texto ira pegar
+
+            console.log(googs.match(/(Sr\s)?[A-Za-z]+/g))
 
 
             //continuar
@@ -68,6 +83,14 @@
             m : Com essa flag a expressão trata caracteres de inicio 
             e fim (^ $) delimitando a cada nova linha e não o texto por completo;
 
+
+            São “atalhos” para determinados conjuntos de caracteres, vamos ver alguns exemplos:
+            \w : Seria o mesmo que [a-zA-Z0–9_]
+            \W : Seria a negação do \w , então, [^a-zA-Z0–9_]
+            \d : Representa o conjunto [0–9]
+            \D : É a negação do \d que seria [^ 0–9]
+            \s : Representa os espaços, tabulações, nova linha, etc…
+            \S : Por sua vez é a negação de \s, que seriam todos os caracteres não espaços.
             
             
             */
