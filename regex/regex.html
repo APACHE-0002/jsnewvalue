@@ -77,7 +77,12 @@
             ^ : Negação
             ? : torna o valor antes dele opcional, 
             EX: /11?/g, ira retornar todos os '1', e todos '11', da string
-        
+
+            + : retorna o valor, e todos os valores iguais a ele que prosseguirem,
+            EX: /11+/g, ira retornar todas strings, que contiverem '11' ou,
+            o '11' mais seu numero repetido que é o '1', como: 111, 11111, 1111111
+
+
             Flags
             
             g : Com essa flag a expressão retorna todas as correspondências
