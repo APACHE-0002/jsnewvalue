@@ -25,6 +25,8 @@
 
             const googs = 'Sr Ivan, Diovani';
 
+            const mails = 'my name is giovani giorgio giovani@email.com , but evebody calls me giorgio'
+
             console.log(text.match(/e/gi));
             //retorna todos o 'e', independente se esta maiusculo ou minusculo
             
@@ -73,7 +75,10 @@
             console.log(loops.match(/(he)+/g));
             //agora se ele encontrar mais he, em outras partes do texto ira pegar
 
-            console.log(googs.match(/(Sr\s)?[A-Za-z]+/g))
+
+            console.log(googs.match(/(Sr\s)?[A-Za-z]+/g));
+
+            console.log(mails.match(/[a-zA-z0-9-]+@/g))
 
             //
             //continuar
