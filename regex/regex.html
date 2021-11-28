@@ -17,7 +17,7 @@
         */
 
 
-            const text = 'Lasanha a bolonhesa Especial.';
+            const text = 'Lasanha a bolonhesa Especial. lasanha';
 
             const positions = 'um texto commmmmmm os numeros 59548564465';
 
@@ -25,7 +25,17 @@
 
             const googs = 'Sr Ivan, Diovani';
 
-            const mails = 'my name is giovani giorgio giovani@email.com , but evebody calls me giorgio'
+            const mails = 'giorgio@email.com my name is giovani giorgio giovani@email.com , but evebody calls me giorgio'
+
+
+            console.log(text.match(/^lasanha/gi))
+            //lasanha do começo
+            
+            console.log(text.match(/lasanha$/gi))
+            //lasanha do final
+            
+            console.log(text.match(/lasanha/gi))
+            //todas lasanha
 
             console.log(text.match(/e/gi));
             //retorna todos o 'e', independente se esta maiusculo ou minusculo
@@ -80,8 +90,10 @@
 
             console.log(mails.match(/[a-zA-z0-9-]+@/g))
 
+            console.log(mails.match(/\S+@/g))
+
             //
-            //continuar
+            //revisar regex nao documentado pelo site
             //https://medium.com/cwi-software/e-o-regex-como-vai-657f94388dc
             /*
 
