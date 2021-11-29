@@ -92,6 +92,13 @@
 
             console.log(mails.match(/\S+@/g))
 
+            console.log(text.match(/\bla/gi))
+            //com o \b, ele pega todos o la, com o g pega todos os la minusculo,
+            // o 'i' pega todos os minusculos e tambem maiusculos
+            // o \w+ pega a palavra inteira lasanha, nao se limitando ao la
+            console.log(text.match(/\bla\w+/gi))
+
+
             //
             //revisar regex nao documentado pelo site
             //https://medium.com/cwi-software/e-o-regex-como-vai-657f94388dc
