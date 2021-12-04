@@ -19,7 +19,7 @@
 
             const text = 'Lasanha a bolonhesa Especial. lasanha';
 
-            const positions = 'um texto commmmmmm os numeros 59548564465';
+            const positions = 'um texto commmmmmm os numeros 59 5485 64 465';
 
             const loops = 'ala caiu no barranco, hehehehehehehe';
 
@@ -106,8 +106,14 @@
             console.log(text.match(/nha\b/gi))
             //pega todas o nha
 
-            console.log(positions.match(/\d{4}/g))
-            //pegara todos os numeros de 0 a 9, em conjuntos onde se finaliza com o numero 4
+            console.log(positions.match(/\d{5}/g))
+            //pegara todos os numeros de 0 a 9, em conjuntos de 5 numeros
+
+            console.log(positions.match(/\d{2}\s/g))
+            //retorna conjuntos de 2 numeros, até acabar a quantidade minima pra  conjuntos{2}
+            //só ira pegar os conjuntos{2} que tiver um espaço após o conjunto.
+
+            console.log(positions.match(/\d{2}\s?/g))
 
 
             //fazer
