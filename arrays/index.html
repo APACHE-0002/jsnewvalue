@@ -212,6 +212,83 @@
             (cars.forEach(function(item, index, array) {
                 console.log(item, index)
             })());
+
+
+            /*
+        ",
+
+     const pokePromise = poke.map( async (result) =>{
+                const response = await api.get(result.name);
+                const poke = response.data;
+                const values = ({
+                    ID: poke.id,
+                    name: poke.name,
+                    image: poke.sprites.front_default
+                })
+                //setPokemons({pokemons, values});
+                return {values};
+            })
+
+            ///
+            const anAsyncFunction = async item => {
+                console.log(`looping ${item}`);
+                const awaitingRequest = await functionWithPromise(item);
+                console.log(`finished looping ${item}`);
+                return awaitingRequest;
+              }
+
+              const fn = async() => {
+                const array = [0, 1, 2];
+                console.log('begin');
+                for (let item of array) {
+                    await anAsyncFunction(item);
+                }
+                console.log('finished');
+                return;
+              }
+        ///
+
+    const [pokemons234, setPokemons234] = useState([]);
+    -buscar outra api,
+    -utilizar um .map, colocar todos os name dentro de uma variavel
+    e no front-end, dar um .map para os cards pegando a propria variavel com os names,
+    enviando pra ca, onde ira entrar em uma funçao 
+    retornando os 3 valores necessarios para construir o card,
+    -ou ja fazer isso aqui e ja levar o array pra la
+    
+    useEffect(() => {
+        for(var i=1; i<19; i++){
+            console.log(pokemons)
+            var newValue = pokemons.results[i].name;
+            
+            setPokemons234(...pokemons234, newValue);
+            console.log(pokemons234)
+        }
+        
+    }, [pokemons > 0])
+    */
+
+    //setPokemons(pokemons2);
+    //vir 20 nome dos pokemons, desses 20 serao extraidos 3 dados
+    //foto, nome, e id, 
+    //o novo array com esses pokemons prontos para serem renderizados sairao daqui
+
+    //const newValue = pokemons2.results[1].name;
+   // console.log(newValue)
+
+    
+
+    /*const response2 = await api.get(newValue);
+    const pokemons23 = response2.data;
+    console.log(pokemons23)*/
+
+    //fazer um .map pegando somente os dados necessarios
+    //e fazer um novo array com os 20,
+
+    //as funçoes dos botoes para requisitar outra pagina ficarao
+    //no arquivo de context
+    //antes de setar no state ja trato o dado , ja dou outro get, com um .map, 
+    //pegando todos dados que quero
         </script>
 </body>
 </html>
