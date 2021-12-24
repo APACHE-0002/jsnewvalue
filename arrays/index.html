@@ -216,6 +216,29 @@
 
             /*
         ",
+        setResult(result + 20);
+        const arr = favoriteRender.slice(result);
+        setFavorites(arr);
+        console.log("passou aqui2")
+        //ao entrar aqui, somar 20 ao result
+        //tes
+        //pegar do result em diante
+        //pegar do 20 em diante do favoriteRender
+        //salvar em favorites
+
+
+         if(result === 20){
+            setFavorites(favoriteRender);     
+            console.log("passou aqui3")
+            return;
+        }
+        if(result > 20){
+            setResult(result - 20);
+            const arr = favoriteRender.slice(result);
+            setFavorites(arr);    
+
+            console.log("passou aqui4")
+        }
 
      const pokePromise = poke.map( async (result) =>{
                 const response = await api.get(result.name);
